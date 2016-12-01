@@ -3,14 +3,12 @@ require __DIR__ . '/common.php';
 
 function is_prime($num)
 {
-    $prime = True;
-    for ($i = 2; $i < $num; $i++) {
+    for ($i = 2; $i <= floor(sqrt($num)); $i++) {
         if ($num % $i == 0) {
-            $prime = False;
-            break;
+            return false;
         }
     }
-    return $prime;
+    return true;
 }
 
 function backwardsPrime($start, $stop)
