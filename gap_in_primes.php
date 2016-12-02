@@ -58,8 +58,8 @@ function gap($g, $m, $n)
             return [$primes[$i], $primes[$i + 1]];
         }
     }
-    return NUL;
+    return null;
 }
 
 dd(gap(2, 100, 110));
-dd(gap(8, 300, 400));
+//dd(gap(8, 300, 400));
