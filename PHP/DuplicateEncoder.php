@@ -14,11 +14,11 @@ require __DIR__ . '/common.php';
 function duplicate_encode($word) 
 {
     $chars = str_split(strtolower($word));
-    $result = [];
+    $result = '';
     foreach ($chars as $key => $word) {
-		$result[] = count(array_keys($chars, $word)) === 1 ? '(' : ')';
+		$result .= count(array_keys($chars, $word)) === 1 ? '(' : ')';
     }
-    return implode($result, '');
+    return $result;
 }
 
-dd(duplicate_encode("iiii#@"));
+dd(duplicate_encode("dindon"));
